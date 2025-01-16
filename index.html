@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPL2 WEBSITE</title>
+  
+  
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&amp;display=swap" rel="stylesheet"/>
+<body>
+  
+
+  <!-- ini navbar -->
+ <!-- component -->
+<style>
+  .header-links li span {
+    position: relative;
+    z-index: 0;
+  }
+
+  .header-links li span::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 2px;
+    left: -4px;
+    right: -4px;
+    display: block;
+    height: 6px;
+  }
+
+  .header-links li.active span::before {
+    background-color: #fcae04;
+  }
+
+  .header-links li:not(.active):hover span::before {
+    background-color: #ccc;
+  }
+  .title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.5rem;
+  color: #000000;
+}
+.subtitle {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  color: #000000;
+}
+.box {
+  background-color: #fdf6e4;
+  border: 2px solid #000;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+</style>
+<div id="Home" ></div>
+<header class="fixed bg-white shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center">
+  <a href="" class="border flex-shrink-0 flex items-center justify-center px-4 lg:px-6 xl:px-8">
+    <img class="" src="https://i.ibb.co/W6ZXdqN/2021-10-26-16h20-21.png" alt="" />
+  </a>
+  <nav class="header-links contents font-semibold text-base lg:text-lg">
+    <ul class="flex items-center ml-4 xl:ml-8 mr-auto">
+      <li class="p-3 xl:p-6 active">
+        <a href="#Home">
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="p-3 xl:p-6">
+        <a href="#Students">
+          <span>Students</span>
+        </a>
+      </li>
+      <li class="p-3 xl:p-6">
+        <a href="#about">
+          <span>About</span>
+        </a>
+      </li>
+      <li class="p-3 xl:p-6">
+        <a href="#struktur">
+          <span>Struktur</span>
+        </a>
+      </li>
+      <li class="p-3 xl:p-6">
+        <a href="#jadwal">
+          <span>Jadwal</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </nav>
+  <nav class="hidden xl:contents">
+    <ul class="flex items-center mr-4 lg:mr-6 xl:mr-8">
+      <li class="p-1">
+      </li>
+      <li class="p-1">
+        <a href="" class="inline-block rounded-full border p-2 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5">
+          <svg class="h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+        </a>
+      </li>
+      <li class="p-1">
+        <a href="https://www.instagram.com/ten_rpl2necy/" class="inline-block rounded-full border p-2 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5">
+          <svg class="h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-instagram fa-w-14 fa-9x"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+</header>
+</head>
+<!-- akhir navbar -->
+
+<!-- konten1 -->
+
+<!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+
+<section
+  class="relative bg-[url(https://media.discordapp.net/attachments/1309103045006589989/1329047494419812402/20250115_181254.jpg?ex=6788eb6f&is=678799ef&hm=e6df6f68d8bd095caaf953c5572c1280964e11efee909f4626e839e9e096e152&=&format=webp&width=787&height=525)] bg-cover bg-center bg-no-repeat"
+>
+  <div
+    class="absolute inset-0 bg-white/75 sm:bg sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+  ></div>
+
+  <div
+    class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+  >
+    <div class="max-w-xl  ltr:sm:text-left rtl:sm:text-right">
+      <h1 class="text-3xl font-extrabold sm:text-5xl">
+        Selamat Datang Di Website
+
+        <strong class="block font-extrabold text-amber-500"> 10 RPL 2 </strong>
+      </h1>
+
+      <p class="mt-4 max-w-lg sm:text-xl/relaxed">
+        Website ini belum sepenuhnya jadi, masih dibangun oleh Dimas, Abud, dan teman-teman lainnya
+      </p>
+
+      <div class="mt-8  flex flex-wrap gap-4 text-center ">
+        <a
+          href="#struktur"
+          class="block w-full rounded bg-amber-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-700 focus:outline-none focus:ring active:bg-yellow-500 sm:w-auto"
+        >
+          Get Started
+        </a>
+
+        <a
+          href="#about"
+          class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-yellow-600 shadow hover:text-amber-400 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- akhir konten1 -->
+<!-- about -->
+<div id="about" class="relative bg-white overflow-hidden mt-16">
+  <div class="max-w-7xl mx-auto">
+      <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+              fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polygon points="50,0 100,0 50,100 0,100"></polygon>
+          </svg>
+
+          <div class="pt-1"></div>
+
+          <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+              <div class="sm:text-center lg:text-left">
+                  <h2 class="my-6 text-2xl tracking-tight font-extrabold text-yellow sm:text-3xl md:text-4xl">
+                      About us
+                  </h2>
+
+                  <p>
+                      kita adalah murid-murid kelas 10 RPL2 di sekolah SMK Negeri 1 Cipeundeuy. kita masuk bersama pada tahun 2024 dan tentu saja kita akan lulus bersama-sama kembali pada 2027.
+                  </p>
+                  <p class="mt-4 text-xl text-black dark:text-black md:mt-8">
+                    <span class="relative inline-block">
+                        <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300 dark:bg-yellow-400"></span>
+                    <span class="relative"> Have a question? </span>
+                    </span>
+                    <br class="block sm:hidden" />Ask on <a href="#" title=""
+                        class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">instagram</a>
+                </p>
+              </div>
+          </main>
+      </div>
+  </div>
+  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img class="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://cdn.discordapp.com/attachments/1309103045006589989/1329064675941285939/IMG_20241118_125254.jpg?ex=6788fb6f&is=6787a9ef&hm=52ca91d83353c010cf2292997e308d8a08848ea0444d68a4dc0ba91f7f73e5c3&" alt="about us">
+  </div>
+</div>
+<!-- about-end -->
+
+<section class="pt-10 overflow-hidden bg-white light:bg-white md:pt-0 sm:pt-16 2xl:pt-16">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid items-center grid-cols-1 md:grid-cols-2">
+
+          <div>
+              <h2 class="text-3xl font-bold leading-tight text-black dark:text-black sm:text-4xl lg:text-5xl">Wali kelas terbaik 
+                  <br class="block sm:hidden" />
+              </h2>
+              <p class="max-w-lg mt-3 text-xl leading-relaxed text-black dark:text-black md:mt-8">
+                  Abdul rahman adalah wali kelas terbaik kita dan beliau adalah orang paling berjasa bagi kita
+              </p>
+
+              
+          </div>
+
+          <div class="relative">
+              
+
+              <img class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="https://cdn.discordapp.com/attachments/1309103045006589989/1329067426301608008/20250115_193903.png?ex=6788fdff&is=6787ac7f&hm=957a7540319726294fb4d900fcedca808248ea077c1741be1503f549d0eb3a38&" alt="" />
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<div id="struktur" class="text-center flex flex-col items-center p-4">
+  <h1 class="title">Struktur Organisasi</h1>
+  <div class="subtitle bg-yellow-200 inline-block px-4 py-1 rounded-full mt-2">Kelas X RPL2</div>
+</div>
+<div class="mt-4">
+  <div class="box text-center ">
+      <p class="font-bold">Kepala Sekolah</p>
+      <p>juriah</p>
+  </div>
+  <div class="box text-center">
+      <p class="font-bold">Wali Kelas</p>
+      <p>Abdul rahman</p>
+  </div>
+  <div class="box text-center">
+      <p class="font-bold">Ketua Kelas</p>
+      <p>Aditia</p>
+  </div>
+  <div class="box text-center">
+      <p class="font-bold">Wakil Ketua Kelas</p>
+      <p>Adinda</p>
+  </div>
+  <div class="flex justify-center mt-4">
+      <div class="box text-center mx-2">
+          <p class="font-bold">Sekretaris</p>
+          <p>Rima</p>
+      </div>
+      <div class="box text-center mx-2">
+          <p class="font-bold">Bendahara1</p>
+          <p>Susan</p>
+          <p>Bendahara2</p>
+          <p>Mesya</p>
+      </div>
+      <div class="box text-center mx-2">
+        <p class="font-bold"
+        >absensi</p>
+        <p>Azmi</p>
+      </div>
+  </div>
+  <div class="flex justify-center mt-4">
+      <div class="box text-center mx-2">
+          <p class="font-bold">Seksi upacara</p>
+          <p>Rizki</p>
+      </div>
+      <div class="box text-center mx-2">
+          <p class="font-bold">Seksi kebersihan</p>
+          <p>Putri</p>
+      </div>
+      <div class="box text-center mx-2">
+          <p class="font-bold">Seksi keagamaan</p>
+          <p>Fahmi</p>
+      </div>
+      <div class="box text-center mx-2">
+          <p class="font-bold">Seksi keamanan</p>
+          <p>Yandi</p>
+      </div>
+      <div class="box text-center mx-2"
+      >
+        <p class="font-bold">Seksi olahraga</p>
+          <p>Adam</p>
+  </div>
+  <div class="box text-center mt-4">
+      <p class="font-bold">Murid</p>
+    <a href="Students.html" class="text-blue-600"><p>daftar Murid</p></a>
+  </div>
+</div>
+
+<article id="jadwal" class="flex bg-white transition hover:shadow-xl mt-8">
+  <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+    <time
+      datetime="2022-10-10"
+      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+    >
+      <span>2025</span>
+      <span class="w-px flex-1 bg-gray-900/10"></span>
+      <span>Jan 6</span>
+    </time>
+  </div>
+
+  <div class="hidden sm:block sm:basis-56">
+    <img
+      alt=""
+      src="https://cdn.discordapp.com/attachments/1309103045006589989/1329078245093671042/20250115_202216.jpg?ex=67890812&is=6787b692&hm=1a2695d7dad78003cb3ea9f9efb9baf3d339cc18e94b7d3e3216f7c9bab2c2f9&"
+      class="aspect-square h-full w-full object-cover"
+    />
+  </div>
+
+  <div class="flex flex-1 flex-col justify-between">
+    <div class="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+      <a href="jadwal.html">
+        <h3 class="font-bold uppercase text-gray-900">
+          jadwal pelajaran 
+        </h3>
+      </a>
+
+      <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+        mau lihat jadwal pelajaran ? pencet aja tombol kuning di bawah ya
+      </p>
+    </div>
+
+    <div class="sm:flex sm:items-end sm:justify-end">
+      <a
+        href="jadwal.html"
+        class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+      >
+        Lihat jadwal
+      </a>
+    </div>
+  </div>
+</article>
+<article class="flex bg-white transition hover:shadow-xl mt-8">
+  <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+    <time
+      datetime="2022-10-10"
+      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+    >
+      <span>2025</span>
+      <span class="w-px flex-1 bg-gray-900/10"></span>
+      <span>Jan 6</span>
+    </time>
+  </div>
+
+  <div class="hidden sm:block sm:basis-56">
+    <img
+      alt=""
+      src="https://cdn.discordapp.com/attachments/1309103045006589989/1329081397306196039/20250115_203444.jpg?ex=67890b02&is=6787b982&hm=4489e77de9005abba8624210c4e5ffea6facd65956a340e0fe7a787a58ddff3b&"
+      class="aspect-square h-full w-full object-cover"
+    />
+  </div>
+
+  <div class="flex flex-1 flex-col justify-between">
+    <div class="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+      <a href="piket.html">
+        <h3 class="font-bold uppercase text-gray-900">
+          jadwal piket 
+        </h3>
+      </a>
+
+      <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+        mau lihat jadwal piket ? pencet aja tombol kuning di bawah ya
+      </p>
+    </div>
+
+    <div class="sm:flex sm:items-end sm:justify-end">
+      <a
+        href="piket.html"
+        class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+      >
+        Lihat jadwal
+      </a>
+    </div>
+  </div>
+</article>
+<article class="flex bg-white transition hover:shadow-xl mt-8">
+  <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+    <time
+      datetime="2022-10-10"
+      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+    >
+      <span>2025</span>
+      <span class="w-px flex-1 bg-gray-900/10"></span>
+      <span>Jan 6</span>
+    </time>
+  </div>
+
+  <div class="hidden sm:block sm:basis-56">
+    <img
+      alt=""
+      src="https://cdn.discordapp.com/attachments/1309103045006589989/1329079353593827360/20250115_202638.jpg?ex=6789091a&is=6787b79a&hm=afaa88b8badca97eb92e764afe185a9ab59efd7dcf5832c1aa122ec21269cf5c&"
+      class="aspect-square h-full w-full object-cover"
+    />
+  </div>
+
+  <div class="flex flex-1 flex-col justify-between">
+    <div class="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+      <a href="#">
+        <h3 class="font-bold uppercase text-gray-900">
+          jadwal ujian</h3></h3> 
+        </h3>
+      </a>
+
+      <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+        mau lihat jadwal ujian ? pencet aja tombol kuning di bawah ya
+      </p>
+    </div>
+
+    <div class="sm:flex sm:items-end sm:justify-end ">
+      <a
+        href="jadwal.html"
+        class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+      >
+        Lihat jadwal
+      </a>
+    </div>
+  </div>
+</article>
+
+<section class="py-24 relative">
+  <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+      <div class="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
+          <div
+              class="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
+              <div class="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
+                  <img class=" rounded-xl object-cover" src="https://cdn.discordapp.com/attachments/1309103045006589989/1329425926731202570/20250116_192351.jpg?ex=678a4be0&is=6788fa60&hm=9ba66743a8567ca57b57a380b678ab97d6bed452ac105d25c080f70cfb395a24&" alt="about Us image" />
+              </div>
+              <img class="sm:ml-0 ml-auto rounded-xl object-cover" src="https://cdn.discordapp.com/attachments/1309103045006589989/1329426087289159691/20250116_192430.jpg?ex=678a4c06&is=6788fa86&hm=257923edd6af1f1fef1c1fce3a8ccde511fe6be6cb8896bd2720ef6dfd3f2f21&"
+                  alt="about Us image" />
+          </div>
+          <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
+              <div class="w-full flex-col justify-center items-start gap-8 flex">
+                  <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
+                      <h2
+                          class="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                          Terimakasih telah mengunjungi website ini</h2>
+                      <p class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
+                          Website ini dibuat sepenuh hati oleh Dimas Ramadan dan Abdul Manap. kita membuat website ini hanya untuk media belajar saja. ini adalah bagian akhir dari website ini, terimakasih telah menjelajahi website ini.</p>
+                  </div>
+                  <div class="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
+                      <div class="flex-col justify-start items-start inline-flex">
+                          <h3 class="text-gray-900 text-4xl font-bold font-manrope leading-normal">36</h3>
+                          <h6 class="text-gray-500 text-base font-normal leading-relaxed">Murid</h6>
+                      </div>
+                      <div class="flex-col justify-center items-center inline-flex">
+                          <h4 class="text-gray-900 text-4xl font-bold font-manrope leading-normal">1</h4>
+                          <h6 class="text-gray-500 text-base font-normal leading-relaxed">tahun bersama</h6>
+                      </div>
+                      <div class="flex-col justify-start items-start inline-flex">
+                          <h4 class="text-gray-900 text-4xl font-bold font-manrope leading-normal">1000+</h4>
+                          <h6 class="text-gray-500 text-base font-normal leading-relaxed">Kenangan</h6>
+                      </div>
+                  </div>
+              </div>
+              <a href="#Home"><button
+                  class="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+                  <span class="px-1.5 text-white text-sm font-medium leading-6">kembali </span>
+              </button></a>
+          </div>
+      </div>
+  </div>
+</section>
+                                      
+
+
+<footer class="bg-white dark:bg-gray-900">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="https://www.instagram.com/ten_rpl2necy/" class="flex items-center">
+                <img src="https://www.svgrepo.com/show/419295/geometric-heart-hearts-2.svg" class="h-8 me-3" alt="love Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">X RPL 2</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="https://id.wikipedia.org/wiki/HTML" class="hover:underline">HTML</a>
+                    </li>
+                    <li>
+                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="https://www.instagram.com/ten_rpl2necy/" class="hover:underline ">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/uZeNC6ka" class="hover:underline">Discord</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="https://flowbite.com/" class="hover:underline">X RPL 2</a>. All Rights Reserved.
+        </span>
+        <!-- <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                      <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                  </svg>
+                <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                      <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                  </svg>
+                <span class="sr-only">Discord community</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                  <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+              </svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">GitHub account</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+              </svg>
+                <span class="sr-only">Dribbble account</span>
+            </a>
+        </div> -->
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>
